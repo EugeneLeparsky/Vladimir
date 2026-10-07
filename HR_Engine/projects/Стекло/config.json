@@ -1,0 +1,60 @@
+{
+  "project_name": "Стекло",
+  "spreadsheet_id": "1NW7xoNjeSew1s9xl5BHJJIJGPiM_9oXI0r87JFNKdiM",
+  "show_browser": true,
+  "vacancies": [
+    {
+      "vacancy_id": "136993801",
+      "name": "Менеджер по работе с клиентами",
+      "sheet": "Лид менеджер"
+    },
+    {
+      "vacancy_id": "136993748",
+      "name": "Менеджер по продажам",
+      "sheet": "Продажник"
+    }
+  ],
+
+  "ai": {
+    "model": "qwen3:8b",
+    "sheets": [
+      {
+        "sheet": "Продажник",
+        "prompt_file": "prompt_prodazhnik.txt",
+        "result_column": "A",
+        "text_column": "B",
+        "number_column": "C",
+        "processed_column": "Y",
+        "processing_version": "2",
+        "start_row": 2,
+
+        "match_value": "Подходит",
+        "unknown_value": "Проверка",
+        "on_error_value": "Проверка",
+
+        "no_match_action": "set",
+        "no_match_value": "Не подходит"
+      },
+      {
+        "sheet": "Лид менеджер",
+        "prompt_file": "prompt_lead_manager.txt",
+        "result_column": "A",
+        "text_column": "B",
+        "number_column": "C",
+        "processed_column": "Y",
+        "processing_version": "1",
+        "start_row": 2,
+
+        "match_value": "Подходит",
+        "unknown_value": "Проверка",
+        "on_error_value": "Проверка",
+
+        "no_match_action": "set",
+        "no_match_value": "Не подходит"
+
+      }
+    ]
+  }
+}
+
+
